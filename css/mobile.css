@@ -1,0 +1,61 @@
+@media (max-width: 600px) {
+  .desktop {
+    display: none; }
+
+  .mobile {
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif; }
+
+  .logo_mb {
+    width: 46%;
+    margin: auto;
+    padding: 16px 0 13px 0; }
+
+  .logo_mb img {
+    width: 100%; }
+
+  .titular_mb {
+    background: #ededed;
+    width: 94%;
+    padding: 12px 0;
+    margin: auto;
+    text-align: center; }
+
+  .titular_mb span {
+    font-size: 33px;
+    font-weight: 300; }
+
+  #view_design {
+    width: 93%;
+    margin: auto;
+    background: #ffffff;
+    border: 2px solid #cccccc;
+    text-align: center;
+    position: relative; }
+
+  #view_design img {
+    max-width: 90%; }
+
+  #btn_mb_back, #btn_mb_como, #btn_mb_precio {
+    width: 18%;
+    height: 50px;
+    background: #ededed;
+    color: #666666;
+    font-size: 17px;
+    position: absolute;
+    right: -3%;
+    padding: 16px 0; }
+
+  #btn_mb_back img {
+    max-width: 39%; }
+
+  #btn_mb_back {
+    top: 20px; }
+
+  #btn_mb_como {
+    top: 80px; }
+
+  #btn_mb_precio {
+    top: 140px; } }
+
+/*# sourceMappingURL=mobile.css.map */
