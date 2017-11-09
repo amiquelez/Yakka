@@ -1,3 +1,0 @@
-# Yakka
-
-##Diseñador de camisetas
