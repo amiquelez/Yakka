@@ -1,4 +1,3 @@
 # Yakka
 
-##Personalizador de camisetas
-
+## Personalizador de camisetas
