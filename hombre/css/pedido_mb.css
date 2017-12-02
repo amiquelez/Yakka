@@ -1,0 +1,11 @@
+/* FINALIZADO */
+#finalizado {
+  width: 100%;
+  height: auto;
+  display: inline-block; }
+  #finalizado .left, #finalizado .right {
+    width: 100%; }
+  #finalizado #finalizado_front {
+    margin-bottom: 10px; }
+
+/*# sourceMappingURL=pedido_mb.css.map */
