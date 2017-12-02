@@ -117,6 +117,11 @@
 							<p>Nombre y Apellido: <span><?= $pedido->nombre_apellido ?></span></p>
 							<p>Email: <span><?= $pedido->email ?></span></p>
 							<p>Telefono: <span><?= $pedido->telefono ?></span></p>
+							<p>Color base: <span><?= $colores[$pedido->color_base] ?></span></p>
+							<p>Color principal: <span><?= $colores[$pedido->color_principal] ?></span></p>
+							<?php if( $pedido->color_secundario > 0){ ?>
+							<p>Color secundario: <span><?= $colores[$pedido->color_secundario] ?></span></p>
+							<?php } ?>
 							<p>Comentario: <span><?= $pedido->comentario ?></span></p>
 						</div>
 						<p class="p3">Jugadores:</p>

@@ -70,22 +70,40 @@
 			<div id="disenador">
 				<div id="content_top">
 					<h1>Diseñador de camisetas Yakka</h1>
+					<p>Personaliz&aacute; las camisetas de los <span>jugadores</span> y ahora tambi&eacute;n pod&eacute;s crear tu modelo de <span>arquero.</span></p>
 				</div>
 				<div id="content_center">
 					<div id="preview">
-						<div class="preview_front">
-							<img src="img/transparent.png" class="img_secundaria" />
-							<img src="img/modelos/modelo_1/color_principal/frente/14.png" class="img_principal" />
-							<img src="img/modelos/modelo_base/frente/4.png" class="img_base" />
-						</div>					
-						<div class="preview_back">
-							<img src="img/transparent.png" class="img_secundaria" />
-							<img src="img/modelos/modelo_1/color_principal/espalda/14.png" class="img_principal" />
-							<img src="img/modelos/modelo_base/espalda/4.png" class="img_base" />
-							<div class="formato_nro_back">
-								<img src="img/numeros/1/14.png">
+						<nav>
+							<ul>
+								<li class="option_select" id="btn_modelo_jugador">
+									<img src="img/jugador.png" class="img_jugador" />
+									<img src="img/jugador_over.png" class="img_jugador_over" />
+									<span>Modelo Jugadores</span>
+								</li>
+								<li class="option_disable" id="btn_modelo_arquero">
+									<img src="img/arquero.png" class="img_arquero" />
+									<img src="img/arquero_over.png" class="img_arquero_over" />
+									<span>Modelo Arquero</span>
+								</li>
+							</ul>
+						</nav>
+						<div class="preview_content">
+							<div class="preview_front">
+								<img src="img/transparent.png" class="img_secundaria" />
+								<img src="img/modelos/modelo_1/color_principal/frente/14.png" class="img_principal" />
+								<img src="img/modelos/modelo_base/frente/4.png" class="img_base" />
 							</div>
-						</div>					
+							<hr />			
+							<div class="preview_back">
+								<img src="img/transparent.png" class="img_secundaria" />
+								<img src="img/modelos/modelo_1/color_principal/espalda/14.png" class="img_principal" />
+								<img src="img/modelos/modelo_base/espalda/4.png" class="img_base" />
+								<div class="formato_nro_back">
+									<img src="img/numeros/1/14.png">
+								</div>
+							</div>				
+						</div>				
 					</div>
 					<div id="settings">
 						<nav>
@@ -251,7 +269,7 @@
 				</div>
 				<div id="content_ft">
 					<div class="btn_style_red" id="btn_confirmar" onclick="ga('send', 'event', 'Diseñador', 'confirmar diseno');">Confirmar dise&ntilde;o</div>
-					<a href="https://www.youtube.com/watch?v=VpeFuCsUYTE" class="swipebox" rel="youtube"><div class="btn_style_white" id="btn_help">&iquest;C&oacute;mo personalizar mi camiseta?</div></a>
+					<a href="https://www.youtube.com/watch?v=VpeFuCsUYTE" class="swipebox" rel="youtube"><div class="btn_style_white" id="btn_help"><span>&iquest;C&oacute;mo personalizar mi camiseta?</span> <img src="img/icon_play.png" /></div></a>
 				</div>
 			</div>
 			<form action="" method="POST" name="formulario" id="formulario">
@@ -308,13 +326,20 @@
 						<div class="btn_style_white" id="btn_modificar">VOLVER A MODIFICAR DISEÑO</div>
 					</div>
 				</div>
+				<!-- Opciones diseno Jugador -->
 				<input type="hidden" name="option_diseno" id="option_diseno" value="1" />
 				<input type="hidden" name="option_color_base" id="option_color_base" value="4" />
 				<input type="hidden" name="option_color_principal" id="option_color_principal" value="14" />
 				<input type="hidden" name="option_color_secundario" id="option_color_secundario" value="9" />
 				<input type="hidden" name="option_formato" id="option_formato" value="1" />
 				<input type="hidden" name="option_color_text" id="option_color_text" value="14" />
-				<input type="hidden" name="option_nombre" id="option_nombre" value="1" />
+				<!-- Opciones diseno Arquero -->
+				<input type="hidden" name="option_diseno_arq" id="option_diseno_arq" value="1" />
+				<input type="hidden" name="option_color_base_arq" id="option_color_base_arq" value="4" />
+				<input type="hidden" name="option_color_principal_arq" id="option_color_principal_arq" value="14" />
+				<input type="hidden" name="option_color_secundario_arq" id="option_color_secundario_arq" value="9" />
+				<input type="hidden" name="option_formato_arq" id="option_formato_arq" value="1" />
+				<input type="hidden" name="option_color_text_arq" id="option_color_text_arq" value="14" />
 			</form>
 			<div id="finalizado">
 				<span class="p1">TU PEDIDO FUE ENVIADO</span>
@@ -638,7 +663,6 @@
 				<input type="hidden" name="option_color_secundario_mb" id="option_color_secundario_mb" value="9" />
 				<input type="hidden" name="option_formato_mb" id="option_formato_mb" value="1" />
 				<input type="hidden" name="option_color_text_mb" id="option_color_text_mb" value="14" />
-				<input type="hidden" name="option_nombre_mb" id="option_nombre_mb" value="1" />
 			</form>
 		</div>
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>

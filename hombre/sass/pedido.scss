@@ -1,0 +1,32 @@
+#finalizado {
+  display: block;
+  margin-top: 0; 
+  .left {
+    width: 50%;
+    float: left; 
+  }
+  .right {
+    width: 43%;
+    float: right;
+    padding-top: 106px; 
+    .info {
+      margin-bottom: 30px; 
+      p {
+        margin-bottom: 6px; 
+      }
+    }
+  }
+  #list_players li {
+    margin-bottom: 8px;
+    .data_jugador {
+      font-weight: bold; 
+    } 
+  }
+  .formato_nro_back_mb {
+    position: absolute;
+    z-index: 9999; 
+    img {
+      width: 100%; 
+    }
+  }
+}

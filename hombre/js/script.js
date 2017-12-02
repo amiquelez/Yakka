@@ -97,7 +97,7 @@ $( document ).ready( function(){
 	$('#btn_diseno').click( function(){
 
 		$('#options_diseno').css('display', 'block');
-		$('#paginador_diseno').css('display', 'inline-block'); // activar cuando quede
+		$('#paginador_diseno').css('display', 'inline-block');
 
 		$('#options_colores').css('display', 'none');
 
@@ -137,6 +137,32 @@ $( document ).ready( function(){
 
 	});
 
+
+	/* NAV JUGADOR - ARQUERO */
+
+	$('#btn_modelo_jugador').click( function(){
+
+		$('#preview nav ul li img').css('display', 'none');
+		$('.img_jugador_over').css('display', 'inline');
+		$('.img_arquero').css('display', 'inline');
+		$(this).addClass('option_select');
+		$(this).removeClass('option_disable');
+		$('#btn_modelo_arquero').removeClass('option_select');
+		$('#btn_modelo_arquero').addClass('option_disable');
+
+	});
+
+	$('#btn_modelo_arquero').click( function(){
+
+		$('#preview nav ul li img').css('display', 'none');
+		$('.img_arquero_over').css('display', 'inline');
+		$('.img_jugador').css('display', 'inline');
+		$(this).addClass('option_select');
+		$(this).removeClass('option_disable');
+		$('#btn_modelo_jugador').removeClass('option_select');
+		$('#btn_modelo_jugador').addClass('option_disable');
+
+	});
 
 
 	/* SELECT DISENO */
