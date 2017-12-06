@@ -8,6 +8,7 @@ $( document ).ready( function(){
 	var secundario = [];
 	var secundario_no_espalda = [];
 	var formato = [];
+	var vistaArquero = false;
 	
 	principal[1] = true;
 	secundario[1] = false;
@@ -150,6 +151,10 @@ $( document ).ready( function(){
 		$('#btn_modelo_arquero').removeClass('option_select');
 		$('#btn_modelo_arquero').addClass('option_disable');
 
+		vistaArquero = false;
+
+		updateVista("jugador", secundario, secundario_no_espalda);
+
 	});
 
 	$('#btn_modelo_arquero').click( function(){
@@ -161,6 +166,10 @@ $( document ).ready( function(){
 		$(this).removeClass('option_disable');
 		$('#btn_modelo_jugador').removeClass('option_select');
 		$('#btn_modelo_jugador').addClass('option_disable');
+
+		vistaArquero = true;
+
+		updateVista("arquero", secundario, secundario_no_espalda);
 
 	});
 
@@ -174,36 +183,15 @@ $( document ).ready( function(){
 
 		var opt_diseno = option[1];
 
-		var c_base = $('#option_color_base').val();
-		var c_prin = $('#option_color_principal').val();
-		var c_secu = $('#option_color_secundario').val();
-		
-		$('#option_diseno').val(opt_diseno);
+		if( vistaArquero ){
 
-		$('.preview_front .img_base').attr('src', 'img/modelos/modelo_base/frente/'+c_base+'.png');
-		$('.preview_back .img_base').attr('src', 'img/modelos/modelo_base/espalda/'+c_base+'.png');
-		$('.preview_front .img_principal').attr('src', 'img/modelos/modelo_'+opt_diseno+'/color_principal/frente/'+c_prin+'.png');
-		$('.preview_back .img_principal').attr('src', 'img/modelos/modelo_'+opt_diseno+'/color_principal/espalda/'+c_prin+'.png');
+			updateDiseno("arquero", opt_diseno, secundario, secundario_no_espalda);
 
-		if( secundario[opt_diseno] ){
-			if( c_secu == 0 ){
-				c_secu = 9;
-			}
-
-			$('.preview_front .img_secundaria').attr('src', 'img/modelos/modelo_'+opt_diseno+'/color_secundario/frente/'+c_secu+'.png');
-				
-			if( secundario_no_espalda[opt_diseno] ){
-				$('.preview_back .img_secundaria').attr('src', 'img/transparent.png');
-			}else{
-				$('.preview_back .img_secundaria').attr('src', 'img/modelos/modelo_'+opt_diseno+'/color_secundario/espalda/'+c_secu+'.png');
-			}
-			$('#option_color_secundario').val(9);
 		}else{
-			$('.preview_front .img_secundaria').attr('src', 'img/transparent.png');
-			$('.preview_back .img_secundaria').attr('src', 'img/transparent.png');
-			$('#option_color_secundario').val(0);
-		}
 
+			updateDiseno("jugador", opt_diseno, secundario, secundario_no_espalda);
+
+		}
 
 		// Pintar borde del seleccionado
 		$('.sel_diseno').removeClass("selected");
@@ -301,11 +289,21 @@ $( document ).ready( function(){
 
 	$('.sel_color_base').click( function(){
 
-		var nro_modelo = $('#option_diseno').val();
-
 		var option = this.id.split("color_base_");
-		
-		$('#option_color_base').val(option[1]);
+
+		var nro_modelo;
+
+		if( vistaArquero ){ // Configuracion arquero
+
+			nro_modelo = $('#option_diseno_arq').val();
+			$('#option_color_base_arq').val(option[1]);
+
+		}else{ // Configuracion jugador
+
+			nro_modelo = $('#option_diseno').val();
+			$('#option_color_base').val(option[1]);
+
+		}
 
 		$('.preview_front .img_base').attr('src', 'img/modelos/modelo_base/frente/'+option[1]+'.png');
 		$('.preview_back .img_base').attr('src', 'img/modelos/modelo_base/espalda/'+option[1]+'.png');
@@ -316,11 +314,21 @@ $( document ).ready( function(){
 
 	$('.sel_color_principal').click( function(){
 
-		var nro_modelo = $('#option_diseno').val();
-
 		var option = this.id.split("color_principal_");
-		
-		$('#option_color_principal').val(option[1]);
+
+		var nro_modelo;
+
+		if( vistaArquero ){ // Configuracion arquero
+
+			nro_modelo = $('#option_diseno_arq').val();
+			$('#option_color_principal_arq').val(option[1]);
+
+		}else{ // Configuracion jugador
+
+			nro_modelo = $('#option_diseno').val();
+			$('#option_color_principal').val(option[1]);
+
+		}
 
 		$('.preview_front .img_principal').attr('src', 'img/modelos/modelo_'+nro_modelo+'/color_principal/frente/'+option[1]+'.png');
 		$('.preview_back .img_principal').attr('src', 'img/modelos/modelo_'+nro_modelo+'/color_principal/espalda/'+option[1]+'.png');
@@ -331,11 +339,22 @@ $( document ).ready( function(){
 
 	$('.sel_color_secundario').click( function(){
 
-		var nro_modelo = $('#option_diseno').val();
-
 		var option = this.id.split("color_secundario_");
-		
-		$('#option_color_secundario').val(option[1]);
+
+		var nro_modelo;
+
+		if( vistaArquero ){ // Configuracion arquero
+
+			nro_modelo = $('#option_diseno_arq').val();
+			$('#option_color_secundario_arq').val(option[1]);
+
+		}else{ // Configuracion jugador
+
+			nro_modelo = $('#option_diseno').val();
+			$('#option_color_secundario').val(option[1]);
+
+		}
+
 
 		$('.preview_front .img_secundaria').attr('src', 'img/modelos/modelo_'+nro_modelo+'/color_secundario/frente/'+option[1]+'.png');
 		
@@ -355,21 +374,32 @@ $( document ).ready( function(){
 
 	$('.sel_formato').click( function(){
 
-
 		var option = this.id.split("formato_");
 
 		var opt = option[1];
+
+		var opt_color;
+
+		if( vistaArquero ){ // Configuracion arquero
+
+			$('#option_formato_arq').val(opt);
+			opt_color = $('#option_color_text_arq').val();
+
+			$('.formato_nro_back img').attr('src', 'img/numeros_arq/'+opt+'/'+opt_color+'.png');
+
+		}else{ // Configuracion jugador
+
+			$('#option_formato').val(opt);
+			opt_color = $('#option_color_text').val();
+
+			$('.formato_nro_back img').attr('src', 'img/numeros/'+opt+'/'+opt_color+'.png');
 		
-		$('#option_formato').val(opt);
+		}
 
 		// Pintar borde del seleccionado
 		$('.sel_formato').removeClass("selected");
 
 		$(this).addClass("selected");
-
-		var opt_color = $('#option_color_text').val();
-
-		$('.formato_nro_back img').attr('src', 'img/numeros/'+opt+'/'+opt_color+'.png');
 
 	});
 
@@ -377,14 +407,25 @@ $( document ).ready( function(){
 
 	$('.sel_color_text').click( function(){
 
-
 		var option = this.id.split("color_text_");
-		
-		$('#option_color_text').val(option[1]);
 
-		var opt = $('#option_formato').val();
+		var opt;
 
-		$('.formato_nro_back img').attr('src', 'img/numeros/'+opt+'/'+option[1]+'.png');
+		if( vistaArquero ){ // Configuracion arquero
+
+			$('#option_color_text_arq').val(option[1]);
+			opt = $('#option_formato_arq').val();
+
+			$('.formato_nro_back img').attr('src', 'img/numeros_arq/'+opt+'/'+option[1]+'.png');
+
+		}else{ // Configuracion jugador
+
+			$('#option_color_text').val(option[1]);
+			opt = $('#option_formato').val();
+
+			$('.formato_nro_back img').attr('src', 'img/numeros/'+opt+'/'+option[1]+'.png');
+
+		}
 
 	});
 
@@ -394,6 +435,8 @@ $( document ).ready( function(){
 	$('#btn_confirmar').click( function(){
 
 		$('#disenador').fadeOut( "slow", function() {
+
+			updateVistaFinal(secundario, secundario_no_espalda);
 
 		   	$('#formulario').fadeIn();
 

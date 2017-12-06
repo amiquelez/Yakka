@@ -20,7 +20,7 @@
 	$comentario = $_POST["comentario"];
 
 
-	$sqlInsertPedido = mysql_query('INSERT INTO pedidos(fecha, diseno, color_base, color_principal, color_secundario, formato, color_nro, nombre_apellido, email, telefono, comentario, estado) VALUES( "'.$fecha.'", '.$diseno.', '.$color_base.', '.$color_principal.', '.$color_secundario.', '.$formato.', '.$color_nro.', "'.$nombre_apellido.'", "'.$email.'", "'.$telefono.'", "'.$comentario.'", 1 )');
+	$sqlInsertPedido = mysql_query('INSERT INTO pedidos(fecha, diseno, color_base, color_principal, color_secundario, formato, color_nro, nombre_apellido, email, telefono, comentario, estado, diseno_arquero, color_base_arquero, color_principal_arquero, color_secundario_arquero, formato_arquero, color_nro_arquero) VALUES( "'.$fecha.'", '.$diseno.', '.$color_base.', '.$color_principal.', '.$color_secundario.', '.$formato.', '.$color_nro.', "'.$nombre_apellido.'", "'.$email.'", "'.$telefono.'", "'.$comentario.'", 1, '.$_POST["option_diseno_arq"].', '.$_POST["option_color_base_arq"].', '.$_POST["option_color_principal_arq"].', '.$_POST["option_color_secundario_arq"].', '.$_POST["option_formato_arq"].', '.$_POST["option_color_text_arq"].' )');
 
 	$pedido = mysql_insert_id();
 

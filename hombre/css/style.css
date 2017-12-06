@@ -325,130 +325,130 @@ h1 {
 
 /* DEFINICION DE COLORES */
 #color_base_1, #color_principal_1, #color_secundario_1, #color_text_1 {
-  background: #d4cb33;
+  background: #dacd4a;
   border: 1px solid #c2c2c2;
   width: 22px !important;
   height: 22px !important; }
 
 #color_base_2, #color_principal_2, #color_secundario_2, #color_text_2 {
-  background: #37387b; }
+  background: #293e7a; }
 
 #color_base_3, #color_principal_3, #color_secundario_3, #color_text_3 {
-  background: #2f2e51; }
+  background: #1e263f; }
 
 #color_base_4, #color_principal_4, #color_secundario_4, #color_text_4 {
   background: #ffffff; }
 
 #color_base_5, #color_principal_5, #color_secundario_5, #color_text_5 {
-  background: #78061e; }
+  background: #6d0b1c; }
 
 #color_base_6, #color_principal_6, #color_secundario_6, #color_text_6 {
-  background: #76a0af; }
+  background: #6b96a6; }
 
 #color_base_7, #color_principal_7, #color_secundario_7, #color_text_7 {
-  background: #579ad2; }
+  background: #4d8fcc; }
 
 #color_base_8, #color_principal_8, #color_secundario_8, #color_text_8 {
-  background: #bb2d5d; }
+  background: #b32753; }
 
 #color_base_9, #color_principal_9, #color_secundario_9, #color_text_9 {
-  background: #9b9c9f; }
+  background: #909195; }
 
 #color_base_10, #color_principal_10, #color_secundario_10, #color_text_10 {
-  background: #636365; }
+  background: #58585a; }
 
 #color_base_11, #color_principal_11, #color_secundario_11, #color_text_11 {
-  background: #836b9d;
+  background: #786092;
   border: 1px solid #c2c2c2;
   width: 22px !important;
   height: 22px !important; }
 
 #color_base_12, #color_principal_12, #color_secundario_12, #color_text_12 {
-  background: #6d5133; }
+  background: #62472d; }
 
 #color_base_13, #color_principal_13, #color_secundario_13, #color_text_13 {
-  background: #be7335; }
+  background: #d56326; }
 
 #color_base_14, #color_principal_14, #color_secundario_14, #color_text_14 {
-  background: #0e0e0e; }
+  background: #000000; }
 
 #color_base_15, #color_principal_15, #color_secundario_15, #color_text_15 {
-  background: #a8001f; }
+  background: #c72424; }
 
 #color_base_16, #color_principal_16, #color_secundario_16, #color_text_16 {
-  background: #aa2375; }
+  background: #b02575; }
 
 #color_base_17, #color_principal_17, #color_secundario_17, #color_text_17 {
-  background: #5fa297; }
+  background: #54988c; }
 
 #color_base_18, #color_principal_18, #color_secundario_18, #color_text_18 {
-  background: #4f8c4f; }
+  background: #468146; }
 
 #color_base_19, #color_principal_19, #color_secundario_19, #color_text_19 {
-  background: #2b4739; }
+  background: #263e32; }
 
 #color_base_20, #color_principal_20, #color_secundario_20, #color_text_20 {
-  background: #7f536d; }
+  background: #874997; }
 
 #color_base_mb_1, #color_principal_mb_1, #color_secundario_mb_1, #color_text_mb_1 {
-  background: #d4cb33; }
+  background: #dacd4a; }
 
 #color_base_mb_2, #color_principal_mb_2, #color_secundario_mb_2, #color_text_mb_2 {
-  background: #37387b; }
+  background: #293e7a; }
 
 #color_base_mb_3, #color_principal_mb_3, #color_secundario_mb_3, #color_text_mb_3 {
-  background: #2f2e51; }
+  background: #1e263f; }
 
 #color_base_mb_4, #color_principal_mb_4, #color_secundario_mb_4, #color_text_mb_4 {
   background: #ffffff; }
 
 #color_base_mb_5, #color_principal_mb_5, #color_secundario_mb_5, #color_text_mb_5 {
-  background: #78061e; }
+  background: #6d0b1c; }
 
 #color_base_mb_6, #color_principal_mb_6, #color_secundario_mb_6, #color_text_mb_6 {
-  background: #76a0af; }
+  background: #6b96a6; }
 
 #color_base_mb_7, #color_principal_mb_7, #color_secundario_mb_7, #color_text_mb_7 {
-  background: #579ad2; }
+  background: #4d8fcc; }
 
 #color_base_mb_8, #color_principal_mb_8, #color_secundario_mb_8, #color_text_mb_8 {
-  background: #bb2d5d; }
+  background: #b32753; }
 
 #color_base_mb_9, #color_principal_mb_9, #color_secundario_mb_9, #color_text_mb_9 {
-  background: #9b9c9f; }
+  background: #909195; }
 
 #color_base_mb_10, #color_principal_mb_10, #color_secundario_mb_10, #color_text_mb_10 {
-  background: #636365; }
+  background: #58585a; }
 
 #color_base_mb_11, #color_principal_mb_11, #color_secundario_mb_11, #color_text_mb_11 {
-  background: #836b9d; }
+  background: #786092; }
 
 #color_base_mb_12, #color_principal_mb_12, #color_secundario_mb_12, #color_text_mb_12 {
-  background: #6d5133; }
+  background: #62472d; }
 
 #color_base_mb_13, #color_principal_mb_13, #color_secundario_mb_13, #color_text_mb_13 {
-  background: #be7335; }
+  background: #d56326; }
 
 #color_base_mb_14, #color_principal_mb_14, #color_secundario_mb_14, #color_text_mb_14 {
-  background: #0e0e0e; }
+  background: #000000; }
 
 #color_base_mb_15, #color_principal_mb_15, #color_secundario_mb_15, #color_text_mb_15 {
-  background: #a8001f; }
+  background: #c72424; }
 
 #color_base_mb_16, #color_principal_mb_16, #color_secundario_mb_16, #color_text_mb_16 {
-  background: #aa2375; }
+  background: #b02575; }
 
 #color_base_mb_17, #color_principal_mb_17, #color_secundario_mb_17, #color_text_mb_17 {
-  background: #5fa297; }
+  background: #54988c; }
 
 #color_base_mb_18, #color_principal_mb_18, #color_secundario_mb_18, #color_text_mb_18 {
-  background: #4f8c4f; }
+  background: #468146; }
 
 #color_base_mb_19, #color_principal_mb_19, #color_secundario_mb_19, #color_text_mb_19 {
-  background: #2b4739; }
+  background: #263e32; }
 
 #color_base_mb_20, #color_principal_mb_20, #color_secundario_mb_20, #color_text_mb_20 {
-  background: #7f536d; }
+  background: #874997; }
 
 /* OPTIONS */
 /* TEXTO */
@@ -546,132 +546,125 @@ h1 {
   padding: 27px;
   margin: 50px auto;
   background: #ffffff; }
-
-#formulario .top {
-  height: 60px;
-  margin-bottom: 29px; }
-
-#formulario .top h2 {
-  font-size: 34px;
-  text-transform: uppercase;
-  margin-top: 18px; }
-
-#formulario .top .slogan {
-  font-size: 21px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-top: 8px;
-  display: block;
-  float: left; }
-
-#formulario .top .alert_min {
-  font-size: 15px;
-  color: #afafaf;
-  font-weight: 700;
-  float: left;
-  margin: 8px 0 0 27px; }
-
-#formulario .content {
-  display: inline-block;
-  height: auto;
-  padding-bottom: 46px; }
-
-#formulario .content .contenedor {
-  height: auto;
-  display: inline-block; }
-
-#formulario .content .contenedor .left {
-  width: 345px;
-  margin-right: 20px;
-  float: left; }
-
-#formulario .content .contenedor .left .preview_front, #formulario .content .contenedor .left .preview_back {
-  width: 158px;
-  height: 195px;
-  float: left;
-  position: relative; }
-
-#formulario .content .contenedor .left .preview_front img, #formulario .content .contenedor .left .preview_back img {
-  width: 100%; }
-
-#formulario .content .contenedor .right {
-  width: 525px;
-  float: left;
-  font-size: 15px;
-  color: #afafaf;
-  font-weight: 700; }
-
-#formulario .content .contenedor .right .row {
-  height: 44px;
-  margin-bottom: 9px; }
-
-#formulario .content .contenedor .right .row label {
-  float: right;
-  padding-top: 17px;
-  margin-right: 11px; }
-
-#formulario .content .contenedor .right .row input[type="text"] {
-  width: 340px;
-  height: 38px;
-  float: right;
-  font-size: 15px;
-  color: #afafaf;
-  padding: 0 5px; }
-
-#formulario .content .contenedor .right .row textarea {
-  width: 340px;
-  height: 88px;
-  float: right;
-  font-size: 15px;
-  color: #afafaf;
-  padding: 0 5px;
-  border: 1px solid #ebebeb;
-  margin-top: 8px; }
-
-#formulario .content .contenedor .right .row_jugador {
-  text-align: right;
-  margin: 0 -22px 6px 0; }
-
-#formulario .content .contenedor .right .row_jugador .btn_delete {
-  font-weight: 300;
-  font-size: 19px;
-  cursor: pointer;
-  margin-left: 6px;
-  position: relative;
-  right: -5px; }
-
-#formulario .content .contenedor .right .row_jugador input, #formulario .content .contenedor .right .row_jugador select {
-  width: 54px;
-  height: 38px;
-  color: #afafaf;
-  padding: 0 5px;
-  font-size: 15px;
-  margin: 0 5px; }
-
-#formulario .content .contenedor .right .row_jugador select {
-  height: 42px;
-  background: transparent; }
-
-#formulario .content .contenedor .right .row_jugador .nombre_jugador {
-  width: 119px; }
-
-#formulario .content .contenedor .right #add_jugador {
-  margin: 10px 0 10px 174px;
-  cursor: pointer; }
-
-#formulario .content .contenedor .right #add_jugador span {
-  text-transform: uppercase;
-  position: relative;
-  top: -6px; }
-
-#formulario .content .bottom {
-  margin: 45px 0; }
-
-#formulario .content .bottom #btn_enviar, #formulario .content .bottom #btn_modificar {
-  float: right; }
-
-#formulario .content .bottom #btn_enviar {
-  border: none; }
+  #formulario .top {
+    height: 60px;
+    margin-bottom: 29px; }
+    #formulario .top h2 {
+      font-size: 34px;
+      text-transform: uppercase;
+      margin-top: 18px; }
+    #formulario .top .slogan {
+      font-size: 21px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-top: 8px;
+      display: block;
+      float: left; }
+    #formulario .top .alert_min {
+      font-size: 15px;
+      color: #afafaf;
+      font-weight: 700;
+      float: left;
+      margin: 8px 0 0 27px; }
+  #formulario .content {
+    display: inline-block;
+    height: auto;
+    padding-bottom: 46px;
+    width: 100%; }
+    #formulario .content .contenedor {
+      width: 100%;
+      height: auto;
+      display: inline-block; }
+      #formulario .content .contenedor .vista_modelos {
+        width: 100%;
+        margin-right: 20px;
+        display: inline-block; }
+        #formulario .content .contenedor .vista_modelos .final_preview_front, #formulario .content .contenedor .vista_modelos .final_preview_back {
+          width: 158px;
+          height: 195px;
+          float: left;
+          position: relative; }
+        #formulario .content .contenedor .vista_modelos .final_preview_front img, #formulario .content .contenedor .vista_modelos .final_preview_back img {
+          width: 100%; }
+        #formulario .content .contenedor .vista_modelos .vista_modelo_contenedor {
+          width: 320px;
+          height: 236px;
+          margin-right: 14px;
+          border: 1px solid #d4d4d4;
+          float: left; }
+          #formulario .content .contenedor .vista_modelos .vista_modelo_contenedor .top_title {
+            height: 21px;
+            margin-bottom: 8px;
+            padding-top: 6px;
+            background: #a6a5a6;
+            color: #ffffff;
+            text-align: center; }
+      #formulario .content .contenedor .form_fields {
+        width: 47%;
+        margin: auto;
+        margin-top: 33px;
+        font-size: 15px;
+        color: #afafaf;
+        font-weight: 700; }
+        #formulario .content .contenedor .form_fields .row {
+          height: 44px;
+          margin-bottom: 9px; }
+          #formulario .content .contenedor .form_fields .row label {
+            float: right;
+            padding-top: 17px;
+            margin-right: 11px; }
+          #formulario .content .contenedor .form_fields .row input[type="text"] {
+            width: 340px;
+            height: 38px;
+            float: right;
+            font-size: 15px;
+            color: #afafaf;
+            padding: 0 5px; }
+          #formulario .content .contenedor .form_fields .row textarea {
+            width: 340px;
+            height: 88px;
+            float: right;
+            font-size: 15px;
+            color: #afafaf;
+            padding: 0 5px;
+            border: 1px solid #ebebeb;
+            margin-top: 8px; }
+        #formulario .content .contenedor .form_fields .row_jugador {
+          text-align: right;
+          margin: 0 -22px 6px 0; }
+          #formulario .content .contenedor .form_fields .row_jugador .btn_delete {
+            font-weight: 300;
+            font-size: 19px;
+            cursor: pointer;
+            margin-left: 6px;
+            position: relative;
+            right: -5px; }
+          #formulario .content .contenedor .form_fields .row_jugador input, #formulario .content .contenedor .form_fields .row_jugador select {
+            width: 54px;
+            height: 38px;
+            color: #afafaf;
+            padding: 0 5px;
+            font-size: 15px;
+            margin: 0 5px; }
+          #formulario .content .contenedor .form_fields .row_jugador select {
+            height: 42px;
+            background: transparent; }
+          #formulario .content .contenedor .form_fields .row_jugador .nombre_jugador {
+            width: 119px; }
+        #formulario .content .contenedor .form_fields #add_jugador {
+          margin: 10px 0 10px 174px;
+          cursor: pointer; }
+          #formulario .content .contenedor .form_fields #add_jugador span {
+            text-transform: uppercase;
+            position: relative;
+            top: -6px; }
+    #formulario .content .bottom {
+      margin: 45px auto;
+      width: 60%; }
+      #formulario .content .bottom #btn_enviar, #formulario .content .bottom #btn_modificar {
+        float: right; }
+      #formulario .content .bottom #btn_enviar {
+        border: none; }
 
 /* FINALIZADO */
 #finalizado {
