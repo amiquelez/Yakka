@@ -7,7 +7,9 @@
     font-family: 'Source Sans Pro', sans-serif; }
 
   body {
-    height: auto; }
+    height: auto; 
+    min-height: 600px;
+  }
 
   /* VIEW */
   .logo_mb {
@@ -19,15 +21,55 @@
     width: 100%; }
 
   .titular_mb {
-    background: #ededed;
+    /*background: #ededed;*/
+    background: transparent;
     width: 94%;
     padding: 12px 0;
     margin: auto;
-    text-align: center; }
-
-  .titular_mb span {
-    font-size: 33px;
-    font-weight: 300; }
+    text-align: center; 
+    span {
+      font-size: 33px;
+      font-weight: 300; 
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+    ul{
+      height: 30px;
+      margin-left: 10px;
+      li{
+        float: left;
+        height: 36px;
+        margin-right: 8px;
+        padding: 6px 10px;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        cursor: pointer;
+        span, img{
+          float: left;
+        }
+        img{
+          margin-top: 6px;
+        }
+        span{
+          width: 65px;
+          font-size: 13px;
+          font-weight: bold;
+          text-transform: uppercase;
+          margin: 3px 0 0 6px;
+        }
+      }
+      .option_select_mb{
+        background: #ffffff;
+      }
+      .option_disable_mb{
+        background: #ebebeb;
+        color: #b6b6b6;
+      }
+    }
+    .img_jugador_mb, .img_arquero_over_mb{
+      display: none;
+    }
+  }
 
   #view_design {
     width: 93%;
@@ -36,23 +78,27 @@
     background: #ffffff;
     border: 2px solid #cccccc;
     text-align: center;
-    position: relative; }
-    #view_design .nombre_back_mb, #view_design .numero_back_mb {
+    position: relative;
+    .nombre_back_mb, .numero_back_mb {
       position: absolute;
       z-index: 9999;
-      color: #ffffff; }
-    #view_design .numero_back_mb {
+      color: #ffffff; 
+    }
+    .numero_back_mb {
       font-size: 76px;
       top: 26%;
-      left: 34%; }
-    #view_design .nombre_back_mb {
+      left: 34%; 
+    }
+    .nombre_back_mb {
       font-size: 30px;
       top: 18%;
-      left: 29%; }
-
-  #view_design img {
-    max-width: 90%;
-    left: 0; }
+      left: 29%; 
+    }
+    img {
+      max-width: 90%;
+      left: 0; 
+    }
+  }
 
   .preview_back_mb {
     display: none; }
@@ -121,74 +167,93 @@
   #options_mb {
     height: auto;
     display: inline-block;
-    width: 100%; }
-    #options_mb #option_estampados, #options_mb #option_colores, #options_mb #option_numeros {
+    width: 100%; 
+    #option_estampados, #option_colores, #option_numeros {
       display: none;
       position: relative;
       background: #ededed;
       padding: 13px 0;
-      z-index: 99999; }
-    #options_mb #color_secundario_box_mb, #options_mb #color_secundario_tit_mb {
-      display: none; }
-    #options_mb #option_estampados {
-      top: -273px; }
-    #options_mb #option_colores {
+      z-index: 99999; 
+    }
+    #color_secundario_box_mb, #color_secundario_tit_mb {
+      display: none; 
+    }
+    #option_estampados {
+      top: -273px; 
+    }
+    #option_colores {
       top: -250px;
       min-height: 165px;
-      padding: 6px 0; }
-    #options_mb #option_numeros {
-      top: -285px; }
-    #options_mb span {
+      padding: 6px 0; 
+    }
+    #option_numeros {
+      top: -285px; 
+    }
+    span {
       color: #8a8a8a;
-      margin-left: 5px; }
-    #options_mb span.accordion.active, #options_mb button.accordion:hover {
-      color: #3096fe; }
-    #options_mb .top {
+      margin-left: 5px; 
+    }
+    span.accordion.active, button.accordion:hover {
+      color: #3096fe; 
+    }
+    .top {
       height: 20px;
-      margin-bottom: 3px; }
-    #options_mb .titular {
+      margin-bottom: 3px; 
+    }
+    .titular {
       float: left;
-      font-size: 16px; }
-    #options_mb .sub_titular {
+      font-size: 16px; 
+    }
+    .sub_titular {
       font-size: 14px;
       width: 100%;
-      display: block; }
-    #options_mb .btn_close {
+      display: block; 
+    }
+    .btn_close {
       float: right;
       color: #8a8a8a;
       margin-right: 15px;
-      cursor: pointer; }
-    #options_mb .sin_nombre_mb {
+      cursor: pointer; 
+    }
+    .sin_nombre_mb {
       float: left;
-      margin-left: 47px; }
-      #options_mb .sin_nombre_mb span {
-        margin-left: -2px;
-        font-style: italic;
-        font-size: 13px; }
-    #options_mb .estampados {
+      margin-left: 47px; 
+    }
+    .sin_nombre_mb span {
+      margin-left: -2px;
+      font-style: italic;
+      font-size: 13px; 
+    }
+    .estampados {
       display: inline-block;
       width: 100%;
-      margin-left: 1%; }
-    #options_mb .estampados li {
-      float: left;
-      width: 9%;
-      margin-left: 1%;
-      text-align: center;
-      background: #ffffff;
-      border: 2px solid #d1d1d1;
-      margin-bottom: 2px;
-      cursor: pointer; }
-      #options_mb .estampados li img {
-        width: 100%; }
-    #options_mb .selected_mb {
-      border: 2px solid #3096fe !important; }
-    #options_mb .list_colores_mb {
+      margin-left: 1%; 
+      li {
+        float: left;
+        width: 9%;
+        margin-left: 1%;
+        text-align: center;
+        background: #ffffff;
+        border: 2px solid #d1d1d1;
+        margin-bottom: 2px;
+        cursor: pointer; 
+        img {
+          width: 100%; 
+        }
+      }
+    }
+    .selected_mb {
+      border: 2px solid #3096fe !important; 
+    }
+    .list_colores_mb {
       display: inline-block;
       width: 99%;
-      margin: 10px 5px; }
-    #options_mb .panel {
-      display: none; }
-    #options_mb .list_colores_mb li {
+      margin: 10px 5px; 
+    }
+    .panel {
+      display: none; 
+    }
+    .list_colores_mb li {
       float: left;
       width: 8%;
       height: 31px;
@@ -198,23 +263,31 @@
       border-radius: 100%;
       -moz-border-radius: 100%;
       -webkit-border-radius: 100%;
-      cursor: pointer; }
-    #options_mb .list_formatos_mb {
+      cursor: pointer; 
+    }
+    .list_formatos_mb {
       display: inline-block;
       width: 100%;
-      margin-left: 10px; }
-    #options_mb .list_formatos_mb li {
-      float: left;
-      width: 14%;
-      height: 53px;
-      background: #ffffff;
-      border: 1px solid #cbcbcb;
-      margin-right: 1%;
-      text-align: center;
-      font-size: 50px;
-      cursor: pointer; }
-      #options_mb .list_formatos_mb li img {
-        width: 100%; }
+      margin-left: 10px; 
+      li {
+        float: left;
+        width: 14%;
+        height: 53px;
+        background: #ffffff;
+        border: 1px solid #cbcbcb;
+        margin-right: 1%;
+        text-align: center;
+        font-size: 50px;
+        cursor: pointer; 
+        img {
+          width: 100%; 
+        }
+      }
+    }
+    #list_formato_arq_mb{
+      display: none;
+    }
+  }
 
   /* PRECIO Y ENTREGA */
   #precio_entrega {

@@ -10,6 +10,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/pedido.css" />
+		<link rel="stylesheet" href="css/pedido_mb.css" />
 		<link rel="stylesheet" href="css/mobile.css" />
 	</head>
 	<body>
@@ -67,73 +68,119 @@
 			</div>
 			<div id="finalizado">
 				<div class="content_finalizado">
-					<div class="left">
+					<div class="top">
 						<span class="p1">PEDIDO NRO: <?= $id ?></span>
 						<p class="p2">Fecha: <?= $pedido->fecha ?></p>
 						<p class="p3">MODELO SELECCIONADO:</p>
-						<div id="finalizado_front">
-							<div class="preview_front">
-								<?php
+						<div class="vista_modelos">
+							<div class="vista_modelo_jugador vista_modelo_contenedor">
+								<div class="top_title">
+									<span>CAMISETA JUGADORES</span>
+								</div>
+								<div class="final_preview_front">
+									<?php
 									if( $pedido->color_secundario > 0 ){
-								?>	
-										<img src="img/modelos/modelo_<?= $pedido->diseno ?>/color_secundario/frente/<?= $pedido->color_secundario ?>.png" class="img_secundaria" />
-								<?php
-									}
-								?>
-								<img src="img/modelos/modelo_<?= $pedido->diseno ?>/color_principal/frente/<?= $pedido->color_principal ?>.png" class="img_principal" />
-								<img src="img/modelos/modelo_base/frente/<?= $pedido->color_base ?>.png" class="img_base" />
-							</div>
-							<div class="footer">
-								<p>CAMISETA REALIZADA CON EL</p>
-								<p>PERSONALIZADOR DE CAMISETAS</p>
-								<img src="img/yakka.png" alt="Yakka" />
-							</div>
-						</div>
-						<div id="finalizado_back">
-							<div class="preview_back">
-								<?php
+									?>	
+											<img src="img/modelos/modelo_<?= $pedido->diseno ?>/color_secundario/frente/<?= $pedido->color_secundario ?>.png" class="img_secundaria" />
+									<?php
+										}
+									?>
+									<img src="img/modelos/modelo_<?= $pedido->diseno ?>/color_principal/frente/<?= $pedido->color_principal ?>.png" class="img_principal" />
+									<img src="img/modelos/modelo_base/frente/<?= $pedido->color_base ?>.png" class="img_base" />
+								</div>					
+								<div class="final_preview_back">
+									<?php
 									if( $pedido->color_secundario > 0 ){
-								?>	
-										<img src="img/modelos/modelo_<?= $pedido->diseno ?>/color_secundario/espalda/<?= $pedido->color_secundario ?>.png" class="img_secundaria" />
-								<?php
-									}
-								?>
-								<img src="img/modelos/modelo_<?= $pedido->diseno ?>/color_principal/espalda/<?= $pedido->color_principal ?>.png" class="img_principal" />
-								<img src="img/modelos/modelo_base/espalda/<?= $pedido->color_base ?>.png" class="img_base" />
+									?>	
+											<img src="img/modelos/modelo_<?= $pedido->diseno ?>/color_secundario/espalda/<?= $pedido->color_secundario ?>.png" class="img_secundaria" />
+									<?php
+										}
+									?>
+									<img src="img/modelos/modelo_<?= $pedido->diseno ?>/color_principal/espalda/<?= $pedido->color_principal ?>.png" class="img_principal" />
+									<img src="img/modelos/modelo_base/espalda/<?= $pedido->color_base ?>.png" class="img_base" />
+									<div class="formato_nro_back">
+										<img src="img/numeros/<?= $pedido->formato ?>/<?= $pedido->color_nro ?>.png">
+									</div>
+								</div>
+								<div class="footer">
+									<p>CAMISETA REALIZADA CON EL</p>
+									<p>PERSONALIZADOR DE CAMISETAS</p>
+									<img src="img/yakka.png" alt="Yakka" />
+								</div>
 							</div>
-							<div class="formato_nro_back_mb">
-								<img src="img/numeros/<?= $pedido->formato ?>/<?= $pedido->color_nro ?>.png">
-							</div>
-							<div class="footer">
-								<p>CAMISETA REALIZADA CON EL</p>
-								<p>PERSONALIZADOR DE CAMISETAS</p>
-								<img src="img/yakka.png" alt="Yakka" />
+							<div class="vista_modelo_arquero vista_modelo_contenedor">
+								<div class="top_title">
+									<span>CAMISETA ARQUERO</span>
+								</div>
+								<div class="final_preview_front">
+									<?php
+									if( $pedido->color_secundario_arquero > 0 ){
+									?>	
+											<img src="img/modelos/modelo_<?= $pedido->diseno_arquero ?>/color_secundario/frente/<?= $pedido->color_secundario_arquero ?>.png" class="img_secundaria" />
+									<?php
+										}
+									?>
+									<img src="img/modelos/modelo_<?= $pedido->diseno_arquero ?>/color_principal/frente/<?= $pedido->color_principal_arquero ?>.png" class="img_principal" />
+									<img src="img/modelos/modelo_base/frente/<?= $pedido->color_base_arquero ?>.png" class="img_base" />
+								</div>					
+								<div class="final_preview_back">
+									<?php
+									if( $pedido->color_secundario_arquero > 0 ){
+									?>	
+											<img src="img/modelos/modelo_<?= $pedido->diseno_arquero ?>/color_secundario/espalda/<?= $pedido->color_secundario_arquero ?>.png" class="img_secundaria" />
+									<?php
+										}
+									?>
+									<img src="img/modelos/modelo_<?= $pedido->diseno_arquero ?>/color_principal/espalda/<?= $pedido->color_principal_arquero ?>.png" class="img_principal" />
+									<img src="img/modelos/modelo_base/espalda/<?= $pedido->color_base_arquero ?>.png" class="img_base" />
+									<div class="formato_nro_back">
+										<img src="img/numeros_arq/<?= $pedido->formato_arquero ?>/<?= $pedido->color_nro_arquero ?>.png">
+									</div>
+								</div>
+								<div class="footer">
+									<p>CAMISETA REALIZADA CON EL</p>
+									<p>PERSONALIZADOR DE CAMISETAS</p>
+									<img src="img/yakka.png" alt="Yakka" />
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="right">
-						<div class="info">
+					<div class="bottom">
+						<div class="panel">
 							<p class="p3">Datos Pedido</p>
 							<p>Nombre y Apellido: <span><?= $pedido->nombre_apellido ?></span></p>
 							<p>Email: <span><?= $pedido->email ?></span></p>
 							<p>Telefono: <span><?= $pedido->telefono ?></span></p>
+							<p>Comentario: <span><?= $pedido->comentario ?></span></p>
+						</div>
+						<div class="panel">
+							<p class="p3">Camiseta Jugador</p>
 							<p>Color base: <span><?= $colores[$pedido->color_base] ?></span></p>
 							<p>Color principal: <span><?= $colores[$pedido->color_principal] ?></span></p>
 							<?php if( $pedido->color_secundario > 0){ ?>
 							<p>Color secundario: <span><?= $colores[$pedido->color_secundario] ?></span></p>
 							<?php } ?>
-							<p>Comentario: <span><?= $pedido->comentario ?></span></p>
 						</div>
-						<p class="p3">Jugadores:</p>
-						<ul id="list_players">
-							<?php
-							while ( $jugador = mysql_fetch_object($sqlJugadores) ){
-							?>
-							<li><span class="titulo">Nombre:</span> <span class="data_jugador"><?= $jugador->nombre ?></span> - <span class="titulo">Nro:</span> <span class="data_jugador"><?= $jugador->nro ?></span> - <span class="titulo">Talle:</span> <span class="data_jugador"><?= $jugador->talle ?></span></li>
-							<?php
-							}
-							?>
-						</ul>
+						<div class="panel">
+							<p class="p3">Camiseta Arquero</p>
+							<p>Color base: <span><?= $colores[$pedido->color_base_arquero] ?></span></p>
+							<p>Color principal: <span><?= $colores[$pedido->color_principal_arquero] ?></span></p>
+							<?php if( $pedido->color_secundario_arquero > 0){ ?>
+							<p>Color secundario: <span><?= $colores[$pedido->color_secundario_arquero] ?></span></p>
+							<?php } ?>
+						</div>
+						<div class="panel">
+							<p class="p3">Jugadores:</p>
+							<ul id="list_players">
+								<?php
+								while ( $jugador = mysql_fetch_object($sqlJugadores) ){
+								?>
+								<li><span class="titulo">Nombre:</span> <span class="data_jugador"><?= $jugador->nombre ?></span> - <span class="titulo">Nro:</span> <span class="data_jugador"><?= $jugador->nro ?></span> - <span class="titulo">Talle:</span> <span class="data_jugador"><?= $jugador->talle ?></span></li>
+								<?php
+								}
+								?>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<form name="form_id_prod" action="" method="POST">

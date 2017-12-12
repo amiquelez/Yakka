@@ -477,9 +477,11 @@ h1 {
   padding-bottom: 13px;
   cursor: pointer;
   box-sizing: border-box; }
+  .list_box li img {
+    width: 100%; }
 
-.list_box li img {
-  width: 100%; }
+.formato_arquero {
+  display: none; }
 
 #formato_1 {
   font-family: "Arial"; }
@@ -538,6 +540,32 @@ h1 {
   left: 1%;
   z-index: 99999; }
 
+/* VISTA MODELOS */
+.vista_modelos {
+  width: 100%;
+  margin-right: 20px;
+  display: inline-block; }
+  .vista_modelos .final_preview_front, .vista_modelos .final_preview_back {
+    width: 158px;
+    height: 195px;
+    float: left;
+    position: relative; }
+  .vista_modelos .final_preview_front img, .vista_modelos .final_preview_back img {
+    width: 100%; }
+  .vista_modelos .vista_modelo_contenedor {
+    width: 320px;
+    height: 236px;
+    margin-right: 14px;
+    border: 1px solid #d4d4d4;
+    float: left; }
+    .vista_modelos .vista_modelo_contenedor .top_title {
+      height: 21px;
+      margin-bottom: 8px;
+      padding-top: 6px;
+      background: #a6a5a6;
+      color: #ffffff;
+      text-align: center; }
+
 /* FORMULARIO */
 #formulario {
   display: none;
@@ -575,30 +603,6 @@ h1 {
       width: 100%;
       height: auto;
       display: inline-block; }
-      #formulario .content .contenedor .vista_modelos {
-        width: 100%;
-        margin-right: 20px;
-        display: inline-block; }
-        #formulario .content .contenedor .vista_modelos .final_preview_front, #formulario .content .contenedor .vista_modelos .final_preview_back {
-          width: 158px;
-          height: 195px;
-          float: left;
-          position: relative; }
-        #formulario .content .contenedor .vista_modelos .final_preview_front img, #formulario .content .contenedor .vista_modelos .final_preview_back img {
-          width: 100%; }
-        #formulario .content .contenedor .vista_modelos .vista_modelo_contenedor {
-          width: 320px;
-          height: 236px;
-          margin-right: 14px;
-          border: 1px solid #d4d4d4;
-          float: left; }
-          #formulario .content .contenedor .vista_modelos .vista_modelo_contenedor .top_title {
-            height: 21px;
-            margin-bottom: 8px;
-            padding-top: 6px;
-            background: #a6a5a6;
-            color: #ffffff;
-            text-align: center; }
       #formulario .content .contenedor .form_fields {
         width: 47%;
         margin: auto;

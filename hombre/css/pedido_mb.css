@@ -1,11 +1,17 @@
 /* FINALIZADO */
-#finalizado {
-  width: 100%;
-  height: auto;
-  display: inline-block; }
-  #finalizado .left, #finalizado #finalizado .right {
-    width: 100%; }
-  #finalizado #finalizado_front {
-    margin-bottom: 10px; }
+@media (max-width: 600px) {
+  #finalizado {
+    width: 100%;
+    height: auto;
+    display: inline-block; }
+    #finalizado .left, #finalizado #finalizado .right {
+      width: 100%; }
+    #finalizado #finalizado_front {
+      margin-bottom: 10px; }
+    #finalizado .vista_modelos .vista_modelo_contenedor {
+      margin-bottom: 6px; }
+    #finalizado .bottom .panel {
+      width: 100%;
+      margin-bottom: 60px; } }
 
 /*# sourceMappingURL=pedido_mb.css.map */

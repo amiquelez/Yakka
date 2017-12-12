@@ -7,7 +7,8 @@
     font-family: 'Source Sans Pro', sans-serif; }
 
   body {
-    height: auto; }
+    height: auto;
+    min-height: 600px; }
 
   /* VIEW */
   .logo_mb {
@@ -19,15 +20,45 @@
     width: 100%; }
 
   .titular_mb {
-    background: #ededed;
+    /*background: #ededed;*/
+    background: transparent;
     width: 94%;
     padding: 12px 0;
     margin: auto;
     text-align: center; }
-
-  .titular_mb span {
-    font-size: 33px;
-    font-weight: 300; }
+    .titular_mb span {
+      font-size: 33px;
+      font-weight: 300;
+      display: inline-block;
+      margin-bottom: 30px; }
+    .titular_mb ul {
+      height: 30px;
+      margin-left: 10px; }
+      .titular_mb ul li {
+        float: left;
+        height: 36px;
+        margin-right: 8px;
+        padding: 6px 10px;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        cursor: pointer; }
+        .titular_mb ul li span, .titular_mb ul li img {
+          float: left; }
+        .titular_mb ul li img {
+          margin-top: 6px; }
+        .titular_mb ul li span {
+          width: 65px;
+          font-size: 13px;
+          font-weight: bold;
+          text-transform: uppercase;
+          margin: 3px 0 0 6px; }
+      .titular_mb ul .option_select_mb {
+        background: #ffffff; }
+      .titular_mb ul .option_disable_mb {
+        background: #ebebeb;
+        color: #b6b6b6; }
+    .titular_mb .img_jugador_mb, .titular_mb .img_arquero_over_mb {
+      display: none; }
 
   #view_design {
     width: 93%;
@@ -49,10 +80,9 @@
       font-size: 30px;
       top: 18%;
       left: 29%; }
-
-  #view_design img {
-    max-width: 90%;
-    left: 0; }
+    #view_design img {
+      max-width: 90%;
+      left: 0; }
 
   .preview_back_mb {
     display: none; }
@@ -104,12 +134,15 @@
     cursor: pointer;
     height: 47px;
     border: 1px solid #f3f3f3; }
-    nav ul li span {
-      display: block; }
-    nav ul li .content_img {
-      height: 73%; }
-      nav ul li .content_img .img_hover {
-        display: none; }
+
+  nav ul li span {
+    display: block; }
+
+  nav ul li .content_img {
+    height: 73%; }
+
+  nav ul li .content_img .img_hover {
+    display: none; }
 
   #btn_pedir_mb {
     margin-right: 0;
@@ -161,25 +194,25 @@
     #options_mb .sin_nombre_mb {
       float: left;
       margin-left: 47px; }
-      #options_mb .sin_nombre_mb span {
-        margin-left: -2px;
-        font-style: italic;
-        font-size: 13px; }
+    #options_mb .sin_nombre_mb span {
+      margin-left: -2px;
+      font-style: italic;
+      font-size: 13px; }
     #options_mb .estampados {
       display: inline-block;
       width: 100%;
       margin-left: 1%; }
-    #options_mb .estampados li {
-      float: left;
-      width: 9%;
-      margin-left: 1%;
-      text-align: center;
-      background: #ffffff;
-      border: 2px solid #d1d1d1;
-      margin-bottom: 2px;
-      cursor: pointer; }
-      #options_mb .estampados li img {
-        width: 100%; }
+      #options_mb .estampados li {
+        float: left;
+        width: 9%;
+        margin-left: 1%;
+        text-align: center;
+        background: #ffffff;
+        border: 2px solid #d1d1d1;
+        margin-bottom: 2px;
+        cursor: pointer; }
+        #options_mb .estampados li img {
+          width: 100%; }
     #options_mb .selected_mb {
       border: 2px solid #3096fe !important; }
     #options_mb .list_colores_mb {
@@ -203,18 +236,20 @@
       display: inline-block;
       width: 100%;
       margin-left: 10px; }
-    #options_mb .list_formatos_mb li {
-      float: left;
-      width: 14%;
-      height: 53px;
-      background: #ffffff;
-      border: 1px solid #cbcbcb;
-      margin-right: 1%;
-      text-align: center;
-      font-size: 50px;
-      cursor: pointer; }
-      #options_mb .list_formatos_mb li img {
-        width: 100%; }
+      #options_mb .list_formatos_mb li {
+        float: left;
+        width: 14%;
+        height: 53px;
+        background: #ffffff;
+        border: 1px solid #cbcbcb;
+        margin-right: 1%;
+        text-align: center;
+        font-size: 50px;
+        cursor: pointer; }
+        #options_mb .list_formatos_mb li img {
+          width: 100%; }
+    #options_mb #list_formato_arq_mb {
+      display: none; }
 
   /* PRECIO Y ENTREGA */
   #precio_entrega {
@@ -223,25 +258,30 @@
     min-height: 530px;
     padding: 18px 12px;
     color: #8a8a8a; }
-    #precio_entrega .top {
-      display: inline-block;
-      width: 100%;
-      margin-bottom: 26px; }
-      #precio_entrega .top .titular {
-        float: left;
-        font-size: 27px;
-        font-weight: 300; }
-      #precio_entrega .top .btn_close_precio_entrega {
-        float: right;
-        color: #8a8a8a;
-        cursor: pointer; }
-    #precio_entrega .titulo {
-      font-weight: 700;
-      margin: 30px 0 8px 0;
-      display: block; }
-    #precio_entrega p {
-      font-size: 14px;
-      line-height: 16px; }
+
+  #precio_entrega .top {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 26px; }
+
+  #precio_entrega .top .titular {
+    float: left;
+    font-size: 27px;
+    font-weight: 300; }
+
+  #precio_entrega .top .btn_close_precio_entrega {
+    float: right;
+    color: #8a8a8a;
+    cursor: pointer; }
+
+  #precio_entrega .titulo {
+    font-weight: 700;
+    margin: 30px 0 8px 0;
+    display: block; }
+
+  #precio_entrega p {
+    font-size: 14px;
+    line-height: 16px; }
 
   /* BACK FORM MINIMO 8 CAMISETAS */
   #back_form_min8 {
@@ -252,18 +292,21 @@
     position: absolute;
     text-align: center;
     z-index: 99999; }
-    #back_form_min8 span {
-      display: block;
-      position: relative;
-      top: 20%; }
-    #back_form_min8 .str_1 {
-      font-weight: 700;
-      font-size: 20px;
-      color: #c81705; }
-    #back_form_min8 .str_2 {
-      color: #8a8a8a;
-      font-size: 62px;
-      font-weight: 300; }
+
+  #back_form_min8 span {
+    display: block;
+    position: relative;
+    top: 20%; }
+
+  #back_form_min8 .str_1 {
+    font-weight: 700;
+    font-size: 20px;
+    color: #c81705; }
+
+  #back_form_min8 .str_2 {
+    color: #8a8a8a;
+    font-size: 62px;
+    font-weight: 300; }
 
   /* FORMULARIO */
   #formulario_mb {
@@ -272,106 +315,135 @@
     width: 88%;
     padding: 2% 6%;
     color: #8a8a8a; }
-    #formulario_mb .top {
-      margin: 5px 0 12px 0; }
-      #formulario_mb .top .titular {
-        font-size: 20px; }
-      #formulario_mb .top .btn_close_form_mb {
-        float: right;
-        margin-right: 15px;
-        cursor: pointer; }
-    #formulario_mb .content_pedido_finalizado_mb {
-      display: none;
-      color: #9c9c9c;
-      text-align: center; }
-      #formulario_mb .content_pedido_finalizado_mb .msj {
-        margin: 50px auto;
-        max-width: 90%;
-        font-size: 16px;
-        line-height: 20px; }
-      #formulario_mb .content_pedido_finalizado_mb .tel_box_mb .tel_tit_mb {
-        display: block;
-        font-size: 12px;
-        margin-bottom: 8px; }
-      #formulario_mb .content_pedido_finalizado_mb .tel_box_mb .tel_mb {
-        margin-bottom: 90px; }
-      #formulario_mb .content_pedido_finalizado_mb .tel_box_mb .tel_mb span {
-        font-size: 30px;
-        font-weight: 300;
-        margin-left: 7px; }
-      #formulario_mb .content_pedido_finalizado_mb .shared_box span {
-        display: block;
-        margin-bottom: 28px; }
-      #formulario_mb .content_pedido_finalizado_mb .shared_box ul {
-        display: inline-block; }
-      #formulario_mb .content_pedido_finalizado_mb .shared_box ul li {
-        float: left;
-        margin-right: 20px; }
-      #formulario_mb .content_pedido_finalizado_mb #pedido_enviado_mb {
-        cursor: pointer;
-        margin: 50px 0 30px 0; }
-        #formulario_mb .content_pedido_finalizado_mb #pedido_enviado_mb img {
-          width: 100%; }
-    #formulario_mb label {
-      margin-bottom: 12px;
-      display: block; }
-      #formulario_mb label span {
-        font-size: 14px; }
-      #formulario_mb label .opcional {
-        font-size: 12px; }
-      #formulario_mb label input, #formulario_mb label textarea {
-        color: #8a8a8a;
-        width: 96%;
-        margin-top: 6px;
-        height: 26px;
-        font-size: 16px;
-        border: 1px solid #cfcfcf;
-        padding: 1px 5px; }
-      #formulario_mb label textarea {
-        height: 75px; }
-    #formulario_mb .box_jugadores_mb {
-      position: relative; }
-      #formulario_mb .box_jugadores_mb .titular {
-        display: block;
-        font-size: 16px;
-        margin: 17px 0 12px 0; }
-      #formulario_mb .box_jugadores_mb .box_jugador_mb {
-        display: inline-block; }
-        #formulario_mb .box_jugadores_mb .box_jugador_mb .numero, #formulario_mb .box_jugadores_mb .box_jugador_mb .talle, #formulario_mb .box_jugadores_mb .box_jugador_mb .nombre {
-          float: left;
-          margin-right: 3%; }
-          #formulario_mb .box_jugadores_mb .box_jugador_mb .numero input, #formulario_mb .box_jugadores_mb .box_jugador_mb .numero select, #formulario_mb .box_jugadores_mb .box_jugador_mb .talle input, #formulario_mb .box_jugadores_mb .box_jugador_mb .talle select, #formulario_mb .box_jugadores_mb .box_jugador_mb .nombre input, #formulario_mb .box_jugadores_mb .box_jugador_mb .nombre select {
-            width: 90%;
-            padding: 0 5%;
-            height: 26px;
-            color: #8a8a8a;
-            font-size: 16px;
-            border: 1px solid #cfcfcf;
-            margin-top: 4px; }
-          #formulario_mb .box_jugadores_mb .box_jugador_mb .numero select, #formulario_mb .box_jugadores_mb .box_jugador_mb .talle select, #formulario_mb .box_jugadores_mb .box_jugador_mb .nombre select {
-            height: 30px; }
-        #formulario_mb .box_jugadores_mb .box_jugador_mb .numero, #formulario_mb .box_jugadores_mb .box_jugador_mb .talle {
-          width: 16%; }
-        #formulario_mb .box_jugadores_mb .box_jugador_mb .nombre {
-          width: 43%; }
-          #formulario_mb .box_jugadores_mb .box_jugador_mb .nombre .opcional {
-            font-size: 14px; }
-      #formulario_mb .box_jugadores_mb #btn_add_jugador_mb {
-        position: absolute;
-        top: 47px;
-        right: 5px;
-        cursor: pointer; }
-      #formulario_mb .box_jugadores_mb #btn_hacer_pedido_mb {
-        width: 100%;
-        padding: 20px 0;
-        background: #c81705;
-        color: #ffffff;
-        font-size: 22px;
-        font-weight: 700;
-        text-align: center;
-        margin: 30px 0;
-        cursor: pointer;
-        border: none; }
+
+  #formulario_mb .top {
+    margin: 5px 0 12px 0; }
+
+  #formulario_mb .top .titular {
+    font-size: 20px; }
+
+  #formulario_mb .top .btn_close_form_mb {
+    float: right;
+    margin-right: 15px;
+    cursor: pointer; }
+
+  #formulario_mb .content_pedido_finalizado_mb {
+    display: none;
+    color: #9c9c9c;
+    text-align: center; }
+
+  #formulario_mb .content_pedido_finalizado_mb .msj {
+    margin: 50px auto;
+    max-width: 90%;
+    font-size: 16px;
+    line-height: 20px; }
+
+  #formulario_mb .content_pedido_finalizado_mb .tel_box_mb .tel_tit_mb {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 8px; }
+
+  #formulario_mb .content_pedido_finalizado_mb .tel_box_mb .tel_mb {
+    margin-bottom: 90px; }
+
+  #formulario_mb .content_pedido_finalizado_mb .tel_box_mb .tel_mb span {
+    font-size: 30px;
+    font-weight: 300;
+    margin-left: 7px; }
+
+  #formulario_mb .content_pedido_finalizado_mb .shared_box span {
+    display: block;
+    margin-bottom: 28px; }
+
+  #formulario_mb .content_pedido_finalizado_mb .shared_box ul {
+    display: inline-block; }
+
+  #formulario_mb .content_pedido_finalizado_mb .shared_box ul li {
+    float: left;
+    margin-right: 20px; }
+
+  #formulario_mb .content_pedido_finalizado_mb #pedido_enviado_mb {
+    cursor: pointer;
+    margin: 50px 0 30px 0; }
+
+  #formulario_mb .content_pedido_finalizado_mb #pedido_enviado_mb img {
+    width: 100%; }
+
+  #formulario_mb label {
+    margin-bottom: 12px;
+    display: block; }
+
+  #formulario_mb label span {
+    font-size: 14px; }
+
+  #formulario_mb label .opcional {
+    font-size: 12px; }
+
+  #formulario_mb label input, #formulario_mb label textarea {
+    color: #8a8a8a;
+    width: 96%;
+    margin-top: 6px;
+    height: 26px;
+    font-size: 16px;
+    border: 1px solid #cfcfcf;
+    padding: 1px 5px; }
+
+  #formulario_mb label textarea {
+    height: 75px; }
+
+  #formulario_mb .box_jugadores_mb {
+    position: relative; }
+
+  #formulario_mb .box_jugadores_mb .titular {
+    display: block;
+    font-size: 16px;
+    margin: 17px 0 12px 0; }
+
+  #formulario_mb .box_jugadores_mb .box_jugador_mb {
+    display: inline-block; }
+
+  #formulario_mb .box_jugadores_mb .box_jugador_mb .numero, #formulario_mb .box_jugadores_mb .box_jugador_mb .talle, #formulario_mb .box_jugadores_mb .box_jugador_mb .nombre {
+    float: left;
+    margin-right: 3%; }
+
+  #formulario_mb .box_jugadores_mb .box_jugador_mb .numero input, #formulario_mb .box_jugadores_mb .box_jugador_mb .numero select, #formulario_mb .box_jugadores_mb .box_jugador_mb .talle input, #formulario_mb .box_jugadores_mb .box_jugador_mb .talle select, #formulario_mb .box_jugadores_mb .box_jugador_mb .nombre input, #formulario_mb .box_jugadores_mb .box_jugador_mb .nombre select {
+    width: 90%;
+    padding: 0 5%;
+    height: 26px;
+    color: #8a8a8a;
+    font-size: 16px;
+    border: 1px solid #cfcfcf;
+    margin-top: 4px; }
+
+  #formulario_mb .box_jugadores_mb .box_jugador_mb .numero select, #formulario_mb .box_jugadores_mb .box_jugador_mb .talle select, #formulario_mb .box_jugadores_mb .box_jugador_mb .nombre select {
+    height: 30px; }
+
+  #formulario_mb .box_jugadores_mb .box_jugador_mb .numero, #formulario_mb .box_jugadores_mb .box_jugador_mb .talle {
+    width: 16%; }
+
+  #formulario_mb .box_jugadores_mb .box_jugador_mb .nombre {
+    width: 43%; }
+
+  #formulario_mb .box_jugadores_mb .box_jugador_mb .nombre .opcional {
+    font-size: 14px; }
+
+  #formulario_mb .box_jugadores_mb #btn_add_jugador_mb {
+    position: absolute;
+    top: 47px;
+    right: 5px;
+    cursor: pointer; }
+
+  #formulario_mb .box_jugadores_mb #btn_hacer_pedido_mb {
+    width: 100%;
+    padding: 20px 0;
+    background: #c81705;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin: 30px 0;
+    cursor: pointer;
+    border: none; }
 
   /* ACCORDION */
   .accordion {
@@ -390,18 +462,22 @@
     width: 100%;
     height: auto;
     display: inline-block; }
-    #finalizado .left, #finalizado .right {
-      width: 100%; }
-    #finalizado .right {
-      padding-top: 66px; }
-    #finalizado #finalizado_front {
-      margin-bottom: 10px; }
+
+  #finalizado .left, #finalizado .right {
+    width: 100%; }
+
+  #finalizado .right {
+    padding-top: 66px; }
+
+  #finalizado #finalizado_front {
+    margin-bottom: 10px; }
 
   .header_pedido_mb {
     width: 46%;
     margin: 15px auto; }
-    .header_pedido_mb img {
-      width: 100%; } }
+
+  .header_pedido_mb img {
+    width: 100%; } }
 @media (max-width: 398px) {
   .formato_nro_back_mb {
     left: -7px; } }
@@ -411,5 +487,6 @@
 @media (max-width: 349px) {
   .formato_nro_back_mb {
     left: -24px; } }
+/*# sourceMappingURL=mobile.css.map */
 
 /*# sourceMappingURL=mobile.css.map */

@@ -31,6 +31,13 @@ function updateVista(vista, secundario, secundario_no_espalda){
 
 	}
 
+	// Ocultar o mostrar opciones de colores secundarios si estan disponibles en el modelo
+	if( secundario[opt_diseno] ){
+		$('#color_secundario_box').css('display', 'block');
+	}else{
+		$('#color_secundario_box').css('display', 'none');
+	}
+
 	$('.preview_front .img_base').attr('src', 'img/modelos/modelo_base/frente/'+c_base+'.png');
 	$('.preview_back .img_base').attr('src', 'img/modelos/modelo_base/espalda/'+c_base+'.png');
 	$('.preview_front .img_principal').attr('src', 'img/modelos/modelo_'+opt_diseno+'/color_principal/frente/'+c_prin+'.png');
@@ -191,5 +198,142 @@ function updateVistaFinal(secundario, secundario_no_espalda){
 
 	$('.vista_modelo_jugador .final_preview_back .formato_nro_back img').attr('src', 'img/numeros/'+jug_opt_formato+'/'+jug_opt_color+'.png');
 
+}
+
+
+//*******  MOBILE  *******//
+
+// Actualizo vista cuando cambia de vista arquero / jugador
+
+function updateVistaMb(vista, secundario, secundario_no_espalda){
+
+	var c_base;
+	var c_prin;
+	var c_secu;
+	var opt_diseno;
+
+	if( vista == "arquero" ){ // Configuracion arquero
+
+		c_base = $('#option_color_base_arq_mb').val();
+		c_prin = $('#option_color_principal_arq_mb').val();
+		c_secu = $('#option_color_secundario_arq_mb').val();
+		opt_diseno = $('#option_diseno_arq_mb').val();
+		opt_formato = $('#option_formato_arq_mb').val();
+		opt_color = $('#option_color_text_arq_mb').val();
+		$('#list_formato_mb').css('display', 'none');
+		$('#list_formato_arq_mb').css('display', 'inline-block');
+
+		$('.formato_nro_back_mb img').attr('src', 'img/numeros_arq/'+opt_formato+'/'+opt_color+'.png');
+
+	}else{ // Configuracion jugador
+
+		c_base = $('#option_color_base_mb').val();
+		c_prin = $('#option_color_principal_mb').val();
+		c_secu = $('#option_color_secundario_mb').val();
+		opt_diseno = $('#option_diseno_mb').val();
+		opt_formato = $('#option_formato_mb').val();
+		opt_color = $('#option_color_text_mb').val();
+		$('#list_formato_mb').css('display', 'inline-block');
+		$('#list_formato_arq_mb').css('display', 'none');
+
+		$('.formato_nro_back_mb img').attr('src', 'img/numeros/'+opt_formato+'/'+opt_color+'.png');
+
+	}
+
+	// Ocultar o mostrar opciones de colores secundarios si estan disponibles en el modelo
+	if( secundario[opt_diseno] ){
+		$('#color_secundario_box_mb').css('display', 'block');
+		$('#color_secundario_tit_mb').css('display', 'block');
+	}else{
+		$('#color_secundario_box_mb').css('display', 'none');
+		$('#color_secundario_tit_mb').css('display', 'none');
+	}
+
+	$('.preview_front_mb .img_base').attr('src', 'img/modelos/modelo_base/frente/'+c_base+'.png');
+	$('.preview_back_mb .img_base').attr('src', 'img/modelos/modelo_base/espalda/'+c_base+'.png');
+	$('.preview_front_mb .img_principal').attr('src', 'img/modelos/modelo_'+opt_diseno+'/color_principal/frente/'+c_prin+'.png');
+	$('.preview_back_mb .img_principal').attr('src', 'img/modelos/modelo_'+opt_diseno+'/color_principal/espalda/'+c_prin+'.png');
+
+	if( secundario[opt_diseno] ){
+		if( c_secu == 0 ){
+			c_secu = 9;
+		}
+
+		$('.preview_front_mb .img_secundaria').attr('src', 'img/modelos/modelo_'+opt_diseno+'/color_secundario/frente/'+c_secu+'.png');
+			
+		if( secundario_no_espalda[opt_diseno] ){
+			$('.preview_back_mb .img_secundaria').attr('src', 'img/transparent.png');
+		}else{
+			$('.preview_back_mb .img_secundaria').attr('src', 'img/modelos/modelo_'+opt_diseno+'/color_secundario/espalda/'+c_secu+'.png');
+		}
+
+	}else{
+		$('.preview_front_mb .img_secundaria').attr('src', 'img/transparent.png');
+		$('.preview_back_mb .img_secundaria').attr('src', 'img/transparent.png');
+
+		if( vista == "arquero" ){
+
+			if( opt_diseno == 1 ){
+				$('#option_color_secundario_arq_mb').val(9);
+			}else{
+				$('#option_color_secundario_arq_mb').val(0);
+			}
+				
+		}else{
+
+			if( opt_diseno == 1 ){
+				$('#option_color_secundario_mb').val(9);
+			}else{
+				$('#option_color_secundario_mb').val(0);
+			}
+
+		}
+	}
+
+}
+
+// Actualizo diseno
+
+function updateDisenoMb(vista, opt_diseno, secundario, secundario_no_espalda){
+
+	var c_base;
+	var c_prin;
+	var c_secu;
+
+	if( vista == "arquero" ){ // Configuracion arquero
+
+		c_base = $('#option_color_base_arq_mb').val();
+		c_prin = $('#option_color_principal_arq_mb').val();
+		c_secu = $('#option_color_secundario_arq_mb').val();
+		
+		$('#option_diseno_arq_mb').val(opt_diseno);
+
+	}else{ // Configuracion jugador
+
+		c_base = $('#option_color_base_mb').val();
+		c_prin = $('#option_color_principal_mb').val();
+		c_secu = $('#option_color_secundario_mb').val();
+		
+		$('#option_diseno_mb').val(opt_diseno);
+
+	}
+
+	$('.preview_front_mb .img_base').attr('src', 'img/modelos/modelo_base/frente/'+c_base+'.png');
+	$('.preview_back_mb .img_base').attr('src', 'img/modelos/modelo_base/espalda/'+c_base+'.png');
+	$('.preview_front_mb .img_principal').attr('src', 'img/modelos/modelo_'+opt_diseno+'/color_principal/frente/'+c_prin+'.png');
+	$('.preview_back_mb .img_principal').attr('src', 'img/modelos/modelo_'+opt_diseno+'/color_principal/espalda/'+c_prin+'.png');
+
+	if( secundario[opt_diseno] ){
+		$('.preview_front_mb .img_secundaria').attr('src', 'img/modelos/modelo_'+opt_diseno+'/color_secundario/frente/'+c_secu+'.png');
+		
+		if( secundario_no_espalda[opt_diseno] ){
+			$('.preview_back_mb .img_secundaria').attr('src', 'img/transparent.png');
+		}else{
+			$('.preview_back_mb .img_secundaria').attr('src', 'img/modelos/modelo_'+opt_diseno+'/color_secundario/espalda/'+c_secu+'.png');
+		}
+	}else{
+		$('.preview_front_mb .img_secundaria').attr('src', 'img/transparent.png');
+		$('.preview_back_mb .img_secundaria').attr('src', 'img/transparent.png');
+	}
 
 }

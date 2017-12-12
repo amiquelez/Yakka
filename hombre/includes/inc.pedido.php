@@ -17,7 +17,7 @@
 
 	$pedido = mysql_fetch_object($sqlPedido);
 
-	$sqlJugadores = mysql_query('SELECT * FROM jugadores WHERE pedido = '.$id.' ORDER BY FIELD (talle, "S", "M", "L", "XL", "XXL")');
+	$sqlJugadores = mysql_query('SELECT * FROM jugadores WHERE pedido = '.$id.' ORDER BY FIELD (talle, 2, 4, 6, 8, 10, 12, 14, "S", "M", "L", "XL", "XXL")');
 
 	$sqlColores = mysql_query('SELECT * FROM colores');
 

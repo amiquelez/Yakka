@@ -492,10 +492,16 @@ h1 {
   font-size: 50px;
   padding-bottom: 13px;
   cursor: pointer;
-  box-sizing: border-box; }
+  box-sizing: border-box; 
+  img {
+  width: 100%; 
+  }
+}
 
-.list_box li img {
-  width: 100%; }
+
+.formato_arquero{
+  display: none;
+}
 
 #formato_1 {
   font-family: "Arial"; }
@@ -556,6 +562,37 @@ h1 {
   left: 1%;
   z-index: 99999; }
 
+/* VISTA MODELOS */
+.vista_modelos {
+  width: 100%;
+  margin-right: 20px;
+  display: inline-block;
+  .final_preview_front, .final_preview_back {
+    width: 158px;
+    height: 195px;
+    float: left;
+    position: relative; 
+  }
+  .final_preview_front img, .final_preview_back img {
+      width: 100%; 
+  }
+  .vista_modelo_contenedor{
+    width: 320px;
+    height: 236px;
+    margin-right: 14px;
+    border: 1px solid #d4d4d4;
+    float: left;
+    .top_title{
+      height: 21px;
+      margin-bottom: 8px;
+      padding-top: 6px;
+      background: #a6a5a6;
+      color: #ffffff;
+      text-align: center;
+    }
+  }
+}
+
 /* FORMULARIO */
 #formulario {
   display: none;
@@ -597,35 +634,6 @@ h1 {
       width: 100%;
       height: auto;
       display: inline-block; 
-      .vista_modelos {
-        width: 100%;
-        margin-right: 20px;
-        display: inline-block;
-        .final_preview_front, .final_preview_back {
-          width: 158px;
-          height: 195px;
-          float: left;
-          position: relative; 
-        }
-        .final_preview_front img, .final_preview_back img {
-            width: 100%; 
-        }
-        .vista_modelo_contenedor{
-          width: 320px;
-          height: 236px;
-          margin-right: 14px;
-          border: 1px solid #d4d4d4;
-          float: left;
-          .top_title{
-            height: 21px;
-            margin-bottom: 8px;
-            padding-top: 6px;
-            background: #a6a5a6;
-            color: #ffffff;
-            text-align: center;
-          }
-        }
-      }
       .form_fields {
         width: 47%;
         margin: auto;
